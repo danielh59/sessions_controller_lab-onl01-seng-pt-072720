@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-     @user = user
+     @user = User.new
    end
 
      def create
@@ -13,6 +13,6 @@ class SessionsController < ApplicationController
          session.delete :name
          redirect_to controller: 'application', action: 'hello'
      end
-   
+
 
 end
